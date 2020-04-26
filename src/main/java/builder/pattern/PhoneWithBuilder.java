@@ -14,7 +14,7 @@ public class PhoneWithBuilder {
     private String processor;
     private String camera;
 
-    public PhoneWithBuilder(Builder builder) {
+    private PhoneWithBuilder(Builder builder) {
         this.company = builder.company;
         this.version = builder.version;
         this.internalMemory = builder.internalMemory;
@@ -90,9 +90,6 @@ public class PhoneWithBuilder {
         private String productAssambleIn;
         private String processor;
         private String camera;
-
-        public Builder() {
-        }
 
         public PhoneWithBuilder build() {
             return new PhoneWithBuilder(this);
